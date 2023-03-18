@@ -1,0 +1,349 @@
+
+/* Navbar CSS start here */
+
+
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 30px 25px;
+  height: 20px;
+  width: end;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+  z-index: 1;
+}
+
+
+#selectedNews{
+  border-radius: 9px;
+  border: 2px solid black;
+  width: 111px;
+  height: 30px;
+}
+
+.header-logotxt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav.dark {
+  background-color: #21222A;
+}
+
+.nav--logo_icon {
+  width: 30px;
+  margin-right: 10px;
+}
+
+.nav--logo_text {
+  color: darkslategrey;
+  margin-right: auto;
+}
+
+.nav--logo_text.dark{
+  color: #515af5;
+  font-family: 'Brawler', serif;
+}
+
+.nav--title {
+  color: #DEEBF8;
+}
+
+.toggler {
+  display: flex;
+  align-items: center;
+}
+
+.toggler p {
+  font-size: 0.625rem;
+  font-weight: 600;
+}
+
+.toggler--slider {
+  width: 25px;
+  height: 13px;
+  background-color: #2B283A;
+  border-radius: 2rem;
+  margin-inline: 7px;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid black;
+  box-sizing: content-box;
+}
+
+nav.dark .toggler--slider {
+  border-color: white;
+  background-color: #F5F5F5;
+}
+
+.nav--logo_textdark
+{
+  color: white;
+}
+
+.toggler--slider--circle {
+  height: 13px;
+  width: 13px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+nav.dark .toggler--slider--circle {
+  background-color: black;
+}
+
+.toggler--light {
+  color: #2B283A;
+}
+
+nav.dark .toggler--light {
+  color: #918E9B;
+}
+
+.toggler--dark {
+  color: #D5D4D8;
+}
+
+nav.dark .toggler-dark {
+  color: #FFFFFF;
+}
+
+nav.dark .toggler--slider {
+  justify-content: flex-end;
+}
+
+/* Navbar CSS end here */
+.all {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+/* Main CSS start here  */
+
+.all.dark{
+  /* background-image: url("./images/react-icon-dark.png");  */
+  background-color: #101011;
+  /* color: rgb(247, 9, 9);     */
+}
+
+.footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;}
+
+/* Card CSS start here */
+
+.card-whole{
+  display: inline-block;
+  margin: 20px;
+  margin-bottom: 12px;
+}
+
+.Card{
+  	display:flex;
+    flex-direction: column;
+    height: 429px;
+    width: 432px;
+    background-color: white;
+    /* border: 1px solid black; */
+    border-radius: 9px;
+    margin-bottom: 2px;
+    box-shadow: 2px 1px 4px 4px #e0e0e0;
+    background-color: rgba(255, 255, 255, 0.751);
+    border-radius: 9px;
+  
+    
+  
+}
+
+.Card.dark{
+  box-shadow:none;
+  
+
+}
+
+
+
+
+.pics{
+width: 420px;
+height: 250px;
+border-radius: 18px;
+overflow: hidden;
+margin-left: 1px;
+background-size: cover;
+background-position: 50%;  
+}
+
+
+
+.Block1{
+	display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+    margin: 16px 5px 16px 5px;
+    font-size: 14px;
+    
+}
+
+
+.title {
+  display: block;
+  color: #000;
+  font-size: 1.125rem;
+  line-height: 1.35;
+  margin: 5px 0px 0px 5px;
+  font-weight: bold;
+  
+}
+
+.Block2{
+  display:flex;
+  justify-content: right;
+  align-items: center;
+  margin: 0px 12px 0px 0px;  
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+} 
+
+
+.Block3{
+	display:flex;
+  flex-direction: row;
+	justify-content: space-between;  
+  align-items: center;
+  padding: 7px;
+  font-family: 'Brawler', serif;
+  font-weight: 700px;            
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Read More button Start */
+.button2 {
+  display: inline-block;
+  transition: all 0.2s ease-in;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  z-index: 1;
+  color: #090909;
+  padding: 0.6em 1.0em;
+  font-size: 13px;
+  border-radius: 0.5em;
+  background: #e8e8e8;
+  border: 1px solid #e8e8e8;
+  box-shadow: 6px 6px 12px #c5c5c5,
+             -2px -3px 18px #ffffff;
+}
+
+.button2:active {
+  color: #666;
+  box-shadow: inset 4px 4px 12px #c5c5c5,
+             inset -4px -4px 12px #ffffff;
+}
+
+.button2:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.25);
+  top: 100%;
+  width: 140%;
+  height: 180%;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.button2:after {
+  content: "";
+  position: absolute;
+  left: 55%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.45);
+  top: 180%;
+  width: 160%;
+  height: 190%;
+  background-color: #009087;
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.button2:hover {
+  color: #ffffff;
+  border: 1px solid #009087;
+}
+
+.button2:hover:before {
+  top: -35%;
+  background-color: #009087;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.button2:hover:after {
+  top: -45%;
+  background-color: #009087;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+/* Read More button End */
+/* Card CSS End here */
+
+
+
+/* Footer Starts here */
+
+.footer.white{
+  background-color: rgb(252, 247, 247);
+  box-shadow: 1px 2px 9px rgba(0, 0, 0, 0.25);
+  z-index: 1;
+}
+
+footer{
+  background: #21222A;
+  color: white;
+}
+
+
+footer ul{
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Footer Ends here */
+
+
+
+@media screen and (max-width: 958px) {
+  
+  .card-whole{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    margin-bottom: 12px;
+  }
+
+  }
