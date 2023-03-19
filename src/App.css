@@ -6,13 +6,15 @@
 nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   background-color: #ffffff;
   padding: 30px 25px;
   height: 20px;
   width: end;
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
-  z-index: 1;
+  /* z-index: 1; */
+  
+  
 }
 
 
@@ -27,11 +29,13 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 
 nav.dark {
   background-color: #21222A;
 }
+
 
 .nav--logo_icon {
   width: 30px;
@@ -41,6 +45,7 @@ nav.dark {
 .nav--logo_text {
   color: darkslategrey;
   margin-right: auto;
+  font-size: 1px;
 }
 
 .nav--logo_text.dark{
@@ -227,15 +232,6 @@ background-position: 50%;
 }
 
 
-
-
-
-
-
-
-
-
-
 /* Read More button Start */
 .button2 {
   display: inline-block;
@@ -346,4 +342,191 @@ footer ul{
     margin-bottom: 12px;
   }
 
+  
+
   }
+
+
+  
+
+  @media screen and (max-width: 400px) {
+  
+    .card-whole{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 20px;
+      margin-bottom: 12px;
+    }
+  
+    nav{
+      font-size: 11px;
+      padding: 20px 15px;
+    }
+
+    
+    
+
+    .pics{
+      width: 305px;
+      height: 140px;
+      border-radius: 12px;
+      overflow: hidden;
+      margin-left: 1px;
+      background-size: cover;
+      background-position: 50%;  
+      }
+
+    .Card{
+      display:flex;
+      flex-direction: column;
+      height: 283px;
+      width: 322px;
+      background-color: white;
+      /* border: 1px solid black; */
+      border-radius: 9px;
+      margin-bottom: 2px;
+      box-shadow: 2px 1px 4px 4px #e0e0e0;
+      background-color: rgba(255, 255, 255, 0.751);
+      border-radius: 9px;
+    
+      
+    
+  }
+
+  
+
+
+  .nav--logo_icon {
+    width: 20px;
+      margin-right:7px;
+    }
+
+  .Block1{
+    display:flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;    
+      margin: 16px 5px 16px 5px;
+      font-size: 6px;
+      
+  }
+  
+  
+  .title {
+    display: block;
+    color: #000;
+    font-size: 0.725rem;
+    line-height: 1.35;
+    margin: 5px 0px 0px 5px;
+    font-weight: bold;
+    
+  }
+  
+  .Block2{
+    display:flex;
+    justify-content: right;
+    align-items: center;
+    margin: 0px 12px 0px 0px;  
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+  } 
+  
+  
+  .Block3{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;  
+    align-items: center;
+    padding: 7px;
+    font-family: 'Brawler', serif;
+    font-size: 12px;
+    
+    /* font-weight: 400px;             */
+  }
+  
+  /* Button css */
+  .button2 {
+    display: inline-block;
+    transition: all 0.2s ease-in;
+    width: 50px;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    z-index: 1;
+    color: #090909;
+    padding: 0.6em 1.0em;
+    font-size: 10.11px;
+    border-radius: 0.5em;
+    background: #e8e8e8;
+    border: 1px solid #e8e8e8;
+    box-shadow: 6px 6px 12px #c5c5c5,
+               -2px -3px 18px #ffffff;
+  }
+  
+  .button2:active {
+    color: #666;
+    box-shadow: inset 4px 4px 12px #c5c5c5,
+               inset -4px -4px 12px #ffffff;
+  }
+  
+  .button2:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.25);
+    top: 100%;
+    width: 140%;
+    height: 180%;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+  }
+  
+  .button2:after {
+    content: "";
+    position: absolute;
+    left: 55%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.45);
+    top: 180%;
+    width: 160%;
+    height: 190%;
+    background-color: #009087;
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+  }
+  
+  .button2:hover {
+    color: #ffffff;
+    border: 1px solid #009087;
+  }
+  
+  .button2:hover:before {
+    top: -35%;
+    background-color: #009087;
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+  }
+  
+  .button2:hover:after {
+    top: -45%;
+    background-color: #009087;
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+  }
+  
+  /* Button css */
+  
+  #selectedNews{
+    border-radius: 9px;
+    border: 2px solid black;
+    width: 90px;
+    height: 25px;
+    
+  }
+
+
+    }
