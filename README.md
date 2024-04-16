@@ -38,6 +38,11 @@ npm start
 
 The app will be available at `http://localhost:3000`.
 
+## Screenshot
+
+![image](https://github.com/emadnahed/lazynews/assets/81587039/98053f4a-9440-4fe3-bfef-77969e7e5f49)
+
+
 ## Usage
 
 The app features a search bar and a set of filters for searching news articles. Users can enter keywords, select a date range, and choose a sorting criterion. The app will then fetch and display the relevant news articles.
