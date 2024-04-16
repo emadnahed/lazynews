@@ -1,81 +1,82 @@
-import React from "react"
-import Card from "./Components/Card"
-import './App.css';
+import React, { useEffect } from "react";
+
+import Card from "./Components/Card";
+import "./App.css";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
-
-
+import { v4 as uuidv4 } from "uuid";
 
 export default function App() {
-    const [NewsData, setNewsData] = React.useState([])
-    const [darkMode, setDarkMode] = React.useState(false)
-    const [formData, setFormData] = React.useState(
-        {
+  const [NewsData, setNewsData] = React.useState([]);
+  const [darkMode, setDarkMode] = React.useState(false);
+  const [formData, setFormData] = React.useState({
+    selectedNews:
+      "everything?q=apple&from=2024-04-14&to=2024-04-14&sortBy=popularity&",
+  });
+  const mapKey = uuidv4();  
+  
+  const APIurl = `https://newsapi.org/v2/${formData.selectedNews}apiKey=${process.env.REACT_APP_NEWS_API_KEY}`;
 
-            selectedNews: "all"
-        }
-    )
-    
-    
-    function handleChange(event) {   
-        const {value} = event.target
-        setFormData(prevFormData => {
-            return {
-                selectedNews: value
-            }
-        })
-    }
-        
-    // side effects
-    React.useEffect(function() {
-        fetch(`https://inshorts.deta.dev/news?category=${formData.selectedNews}`)
-            .then(res => res.json())
-            .then(data => setNewsData(data.data))
-    }, [formData.selectedNews])
-    
-    function toggleDarkMode() {
-        setDarkMode(prevMode => !prevMode)
-    }
-    
-    let currentMode = darkMode ? "dark": "white"
-    let combination = `all ${currentMode}`
-    
-    
-    console.log(combination)
+  function handleChange(event) {
+    const { value } = event.target;
+    setFormData((prevFormData) => {
+      return {
+        selectedNews: value,
+      };
+    });
+  }
 
-    const CardElements = NewsData.map(news => {return <Card  
-                                                className="card"
-                                                key={news.id} 
-                                                currentMode={currentMode}
-                                                Author={news.author} 
-                                                NewsTitle={news.title} 
-                                                NewsContent={news.content} 
-                                                RMore={news.readMoreUrl} 
-                                                url={news.url}
-                                                NewsDate={news.date.slice(0,11)} 
-                                                NewsImage={news.imageUrl}
-                                                NewsTime={news.time}
-                                                />}
-                                                )
-    
-    
-    
+  // side effects
+  useEffect(
+    function () {
+      setNewsData([]);
+      fetch(APIurl)
+        .then((res) => res.json())
+        .then((data) => setNewsData(data.articles));
+    },
+    [formData.selectedNews, APIurl]
+  );
+
+  console.log(formData.selectedNews, "Is form Data");
+
+  function toggleDarkMode() {
+    setDarkMode((prevMode) => !prevMode);
+  }
+
+  let currentMode = darkMode ? "dark" : "white";
+  let combination = `all ${currentMode}`;
+
+  const CardElements = NewsData.map((news) => {
     return (
-        <div className={combination}>
-            <Header 
-                darkMode={darkMode} 
-                toggleDarkMode={toggleDarkMode}
-                currentMode={currentMode}
-                handleChange={handleChange}
-                selectedNews = {formData.selectedNews}
-            />
+      <Card
+        className="card"
+        key={news.source.id && mapKey}
+        currentMode={currentMode}
+        Author={news.author}
+        NewsTitle={news.title}
+        NewsContent={news.description}
+        url={news.url}
+        NewsDate={news.publishedAt}
+        NewsImage={news.urlToImage}
+      />
+    );
+  });
 
-            <main className="dea">
-            {CardElements}
-            </main>                
+  return (
+    <div className={combination}>
+      <Header
+        darkMode={darkMode}
+        toggleDarkMode={toggleDarkMode}
+        currentMode={currentMode}
+        handleChange={handleChange}
+        selectedNews={formData.selectedNews}
+      />
 
-            <Footer darkMode={darkMode}/>
+      <main className="dea">
+        {NewsData.length < 1 ? "Loading..." : CardElements}
+      </main>
 
-        </div>
-    )
+      <Footer darkMode={darkMode} />
+    </div>
+  );
 }

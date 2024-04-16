@@ -1,7 +1,4 @@
-
 /* Navbar CSS start here */
-
-
 
 nav {
   display: flex;
@@ -13,12 +10,9 @@ nav {
   width: end;
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
   /* z-index: 1; */
-  
-  
 }
 
-
-#selectedNews{
+#selectedNews {
   border-radius: 9px;
   border: 2px solid black;
   width: 111px;
@@ -29,13 +23,11 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 
 nav.dark {
-  background-color: #21222A;
+  background-color: #21222a;
 }
-
 
 .nav--logo_icon {
   width: 30px;
@@ -48,13 +40,13 @@ nav.dark {
   font-size: 1px;
 }
 
-.nav--logo_text.dark{
+.nav--logo_text.dark {
   color: #515af5;
-  font-family: 'Brawler', serif;
+  font-family: "Brawler", serif;
 }
 
 .nav--title {
-  color: #DEEBF8;
+  color: #deebf8;
 }
 
 .toggler {
@@ -70,7 +62,7 @@ nav.dark {
 .toggler--slider {
   width: 25px;
   height: 13px;
-  background-color: #2B283A;
+  background-color: #2b283a;
   border-radius: 2rem;
   margin-inline: 7px;
   cursor: pointer;
@@ -83,11 +75,10 @@ nav.dark {
 
 nav.dark .toggler--slider {
   border-color: white;
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
 }
 
-.nav--logo_textdark
-{
+.nav--logo_textdark {
   color: white;
 }
 
@@ -103,19 +94,19 @@ nav.dark .toggler--slider--circle {
 }
 
 .toggler--light {
-  color: #2B283A;
+  color: #2b283a;
 }
 
 nav.dark .toggler--light {
-  color: #918E9B;
+  color: #918e9b;
 }
 
 .toggler--dark {
-  color: #D5D4D8;
+  color: #d5d4d8;
 }
 
 nav.dark .toggler-dark {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 nav.dark .toggler--slider {
@@ -127,12 +118,11 @@ nav.dark .toggler--slider {
   background-color: white;
   display: flex;
   flex-direction: column;
-  
 }
 
 /* Main CSS start here  */
 
-.all.dark{
+.all.dark {
   /* background-image: url("./images/react-icon-dark.png");  */
   background-color: #101011;
   /* color: rgb(247, 9, 9);     */
@@ -142,64 +132,65 @@ nav.dark .toggler--slider {
   position: relative;
   left: 0;
   bottom: 0;
-  width: 100%;}
+  width: 100%;
+}
 
 /* Card CSS start here */
 
-.card-whole{
+.card-whole {
   display: inline-block;
   margin: 20px;
   margin-bottom: 12px;
 }
 
-.Card{
-  	display:flex;
-    flex-direction: column;
-    height: 429px;
-    width: 432px;
-    background-color: white;
-    /* border: 1px solid black; */
-    border-radius: 9px;
-    margin-bottom: 2px;
-    box-shadow: 2px 1px 4px 4px #e0e0e0;
-    background-color: rgba(255, 255, 255, 0.751);
-    border-radius: 9px;
-  
-    
-  
-}
+.Card {
+  display: flex;
+  flex-direction: column;
+  height: 449px;
+  width: 432px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: white;
+  /* border: 1px solid black; */
+  /* border-radius: 9px; */
 
-.Card.dark{
-  box-shadow:none;
-  
+  border-radius: 19px;
+  background: #e0e0e0;
+  box-shadow:  5px 5px 10px #868686,
+             -5px -5px 10px #ffffff;
 
-}
-
-
-
-
-.pics{
-width: 420px;
-height: 250px;
-border-radius: 18px;
-overflow: hidden;
-margin-left: 1px;
-background-size: cover;
-background-position: 50%;  
+  margin-bottom: 2px;
+  box-shadow: 2px 1px 4px 4px #e0e0e0;
+  /* background-color: rgba(255, 255, 255, 0.751); */
+  /* border-radius: 9px; */
 }
 
 
 
-.Block1{
-	display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;    
-    margin: 16px 5px 16px 5px;
-    font-size: 14px;
-    
+
+.Card.dark {
+  box-shadow: none;
+  background: white;
+  background-color: white;
 }
 
+.pics {
+  width: 420px;
+  height: 250px;
+  border-radius: 18px;
+  overflow: hidden;
+  margin-left: 1px;
+  background-size: cover;
+  background-position: 50%;
+}
+
+.Block1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 16px 5px 16px 5px;
+  font-size: 14px;
+}
 
 .title {
   display: block;
@@ -208,29 +199,26 @@ background-position: 50%;
   line-height: 1.35;
   margin: 5px 0px 0px 5px;
   font-weight: bold;
-  
 }
 
-.Block2{
-  display:flex;
+.Block2 {
+  display: flex;
   justify-content: right;
   align-items: center;
-  margin: 0px 12px 0px 0px;  
-  font-family: 'Josefin Sans', sans-serif;
+  margin: 0px 12px 0px 0px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-weight: 400;
-} 
-
-
-.Block3{
-	display:flex;
-  flex-direction: row;
-	justify-content: space-between;  
-  align-items: center;
-  padding: 7px;
-  font-family: 'Brawler', serif;
-  font-weight: 700px;            
 }
 
+.Block3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 700px;
+}
 
 /* Read More button Start */
 .button2 {
@@ -241,19 +229,17 @@ background-position: 50%;
   text-decoration: none;
   z-index: 1;
   color: #090909;
-  padding: 0.6em 1.0em;
+  padding: 0.6em 1em;
   font-size: 13px;
   border-radius: 0.5em;
   background: #e8e8e8;
   border: 1px solid #e8e8e8;
-  box-shadow: 6px 6px 12px #c5c5c5,
-             -2px -3px 18px #ffffff;
+  box-shadow: 6px 6px 12px #c5c5c5, -2px -3px 18px #ffffff;
 }
 
 .button2:active {
   color: #666;
-  box-shadow: inset 4px 4px 12px #c5c5c5,
-             inset -4px -4px 12px #ffffff;
+  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
 }
 
 .button2:before {
@@ -305,23 +291,20 @@ background-position: 50%;
 /* Read More button End */
 /* Card CSS End here */
 
-
-
 /* Footer Starts here */
 
-.footer.white{
+.footer.white {
   background-color: rgb(252, 247, 247);
   box-shadow: 1px 2px 9px rgba(0, 0, 0, 0.25);
   z-index: 1;
 }
 
-footer{
-  background: #21222A;
+footer {
+  background: #21222a;
   color: white;
 }
 
-
-footer ul{
+footer ul {
   list-style-type: none;
   display: flex;
   justify-content: space-around;
@@ -329,11 +312,19 @@ footer ul{
 
 /* Footer Ends here */
 
-
-
 @media screen and (max-width: 958px) {
-  
-  .card-whole{
+  .card-whole {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    margin-bottom: 12px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .card-whole {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -342,78 +333,49 @@ footer ul{
     margin-bottom: 12px;
   }
 
-  
-
+  nav {
+    font-size: 11px;
+    padding: 20px 15px;
   }
 
-
-  
-
-  @media screen and (max-width: 400px) {
-  
-    .card-whole{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      margin: 20px;
-      margin-bottom: 12px;
-    }
-  
-    nav{
-      font-size: 11px;
-      padding: 20px 15px;
-    }
-
-    
-    
-
-    .pics{
-      width: 305px;
-      height: 140px;
-      border-radius: 12px;
-      overflow: hidden;
-      margin-left: 1px;
-      background-size: cover;
-      background-position: 50%;  
-      }
-
-    .Card{
-      display:flex;
-      flex-direction: column;
-      height: 283px;
-      width: 322px;
-      background-color: white;
-      /* border: 1px solid black; */
-      border-radius: 9px;
-      margin-bottom: 2px;
-      box-shadow: 2px 1px 4px 4px #e0e0e0;
-      background-color: rgba(255, 255, 255, 0.751);
-      border-radius: 9px;
-    
-      
-    
+  .pics {
+    width: 305px;
+    height: 140px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-left: 1px;
+    background-size: cover;
+    background-position: 50%;
   }
 
-  
-
+  .Card {
+    display: flex;
+    flex-direction: column;
+    height: 283px;
+    width: 322px;
+    background-color: white;
+    /* border: 1px solid black; */
+    border-radius: 9px;
+    margin-bottom: 2px;
+    box-shadow: 2px 1px 4px 4px #e0e0e0;
+    background-color: rgba(255, 255, 255, 0.751);
+    border-radius: 9px;
+  }
 
   .nav--logo_icon {
     width: 20px;
-      margin-right:7px;
-    }
-
-  .Block1{
-    display:flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;    
-      margin: 16px 5px 16px 5px;
-      font-size: 6px;
-      
+    margin-right: 7px;
   }
-  
-  
+
+  .Block1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 16px 5px 16px 5px;
+    font-size: 6px;
+  }
+
   .title {
     display: block;
     color: #000;
@@ -421,31 +383,29 @@ footer ul{
     line-height: 1.35;
     margin: 5px 0px 0px 5px;
     font-weight: bold;
-    
   }
-  
-  .Block2{
-    display:flex;
+
+  .Block2 {
+    display: flex;
     justify-content: right;
     align-items: center;
-    margin: 0px 12px 0px 0px;  
-    font-family: 'Josefin Sans', sans-serif;
+    margin: 0px 12px 0px 0px;
+    font-family: "Josefin Sans", sans-serif;
     font-weight: 400;
-  } 
-  
-  
-  .Block3{
-    display:flex;
+  }
+
+  .Block3 {
+    display: flex;
     flex-direction: row;
-    justify-content: space-between;  
+    justify-content: space-between;
     align-items: center;
     padding: 7px;
-    font-family: 'Brawler', serif;
+    font-family: "Brawler", serif;
     font-size: 12px;
-    
+
     /* font-weight: 400px;             */
   }
-  
+
   /* Button css */
   .button2 {
     display: inline-block;
@@ -456,21 +416,19 @@ footer ul{
     text-decoration: none;
     z-index: 1;
     color: #090909;
-    padding: 0.6em 1.0em;
+    padding: 0.6em 1em;
     font-size: 10.11px;
     border-radius: 0.5em;
     background: #e8e8e8;
     border: 1px solid #e8e8e8;
-    box-shadow: 6px 6px 12px #c5c5c5,
-               -2px -3px 18px #ffffff;
+    box-shadow: 6px 6px 12px #c5c5c5, -2px -3px 18px #ffffff;
   }
-  
+
   .button2:active {
     color: #666;
-    box-shadow: inset 4px 4px 12px #c5c5c5,
-               inset -4px -4px 12px #ffffff;
+    box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
   }
-  
+
   .button2:before {
     content: "";
     position: absolute;
@@ -485,7 +443,7 @@ footer ul{
     transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
     z-index: -1;
   }
-  
+
   .button2:after {
     content: "";
     position: absolute;
@@ -500,33 +458,30 @@ footer ul{
     transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
     z-index: -1;
   }
-  
+
   .button2:hover {
     color: #ffffff;
     border: 1px solid #009087;
   }
-  
+
   .button2:hover:before {
     top: -35%;
     background-color: #009087;
     transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
   }
-  
+
   .button2:hover:after {
     top: -45%;
     background-color: #009087;
     transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
   }
-  
+
   /* Button css */
-  
-  #selectedNews{
+
+  #selectedNews {
     border-radius: 9px;
     border: 2px solid black;
     width: 90px;
     height: 25px;
-    
   }
-
-
-    }
+}
