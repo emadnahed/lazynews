@@ -15,6 +15,7 @@ export default function App() {
   });
   const mapKey = uuidv4();  
   
+
   const APIurl = `https://newsapi.org/v2/${formData.selectedNews}apiKey=${process.env.REACT_APP_NEWS_API_KEY}`;
 
   function handleChange(event) {

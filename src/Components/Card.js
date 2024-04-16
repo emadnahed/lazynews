@@ -20,7 +20,7 @@ export default function Card(props) {
         <div className="Block1">
           <a href={props.url}>
             <img
-              src={props.NewsImage ? props.NewsImage : NotLoading}
+              src={props.NewsImage ? props.NewsImage : NotLoading }
               className="pics"
               alt={` By ${props.Author}`}
             />{" "}
