@@ -74,7 +74,7 @@ export default function App() {
       />
 
       <main className="dea">
-        {NewsData.length < 1 ? "Loading..." : CardElements}
+        {NewsData.length < 1 ? "" : CardElements}
       </main>
 
       <Footer darkMode={darkMode} />
